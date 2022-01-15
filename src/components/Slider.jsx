@@ -1,6 +1,6 @@
 import { ArrowLeftOutlined , ArrowRightOutlined} from '@material-ui/icons'
 import React,{useState, useEffect} from 'react'
-
+import { sliderItems } from '../data'
 import styled from 'styled-components'
 const Container =styled.div`
     width: 100%;
@@ -31,7 +31,8 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transform: translateX(00vw)
+    transform: translateX(${props=>props.slideIndex * -100}vw);
+    transition: all 1.5s ease;
 `
 const Slide = styled.div`
     display:flex;
@@ -66,14 +67,23 @@ const Desc = styled.p`
     letter-spacing: 3px;
 `
 const Button = styled.button`
+    height: 30px;
+    width: 120px;
     padding 10px:
-    font-size: 35px;
+    font-size: 50px;
     background-color: transparent;
-    cursor: pointer
+    cursor: pointer;
+    font-weight: 500;
+
 `
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0)
     const handleClick = (direction) => {
+        if(direction==="left"){
+            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
+        } else {
+            setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
+        }
 
     };
 
@@ -82,39 +92,20 @@ const Slider = () => {
             <Arrow direction="left" onClick={()=>handleClick("left")}>
                 <ArrowLeftOutlined/>
             </Arrow>
-            <Wrapper>
-                <Slide bg="f5fafd">
+            <Wrapper slideIndex={slideIndex}>
+                {sliderItems.map((item) => (
+                <Slide bg={item.bg}>
                 <ImgContainer>
-                <Image src="https://mvcmagazine.com/wp-content/uploads/2020/08/mvccopsupreme.jpg"/>
+                <Image src={item.img}/>
                 </ImgContainer>
                 <InfoContainer>
-                    <Tittle>WINTER SALE</Tittle>
-                    <Desc>Don't miss it 40$ off storewide</Desc>
+                    <Tittle>{item.title}</Tittle>
+                    <Desc>{item.desc}</Desc>
                     <Button>SHOW NOW</Button>
                 </InfoContainer>
                 </Slide>
-
-                <Slide bg="fcf1ed">
-                <ImgContainer>
-                <Image src="https://mvcmagazine.com/wp-content/uploads/2020/08/mvccopsupreme.jpg"/>
-                </ImgContainer>
-                <InfoContainer>
-                    <Tittle>Sumer SALE</Tittle>
-                    <Desc>Don't miss it 40$ off storewide</Desc>
-                    <Button>SHOW NOW</Button>
-                </InfoContainer>
-                </Slide>
-                
-                <Slide bg="fbf0f4">
-                <ImgContainer>
-                <Image src="https://mvcmagazine.com/wp-content/uploads/2020/08/mvccopsupreme.jpg"/>
-                </ImgContainer>
-                <InfoContainer>
-                    <Tittle>Spring SALE</Tittle>
-                    <Desc>Don't miss it 40$ off storewide</Desc>
-                    <Button>SHOW NOW</Button>
-                </InfoContainer>
-                </Slide>
+                ))}
+              
             </Wrapper>
             <Arrow direction="right" onClick={()=>handleClick("right")}>
                 <ArrowRightOutlined/>
