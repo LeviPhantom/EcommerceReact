@@ -27,21 +27,42 @@ export const sliderItems = [
 export const categories = [
     {   
         id:1,
-        img:"https://static.techspot.com/images/products/2019/graphics-cards/org/2019-02-22-product-2.jpg",
+        img:"https://cdn.vox-cdn.com/thumbor/w6bqj_05Y0DpflwLFRpclaTBWOg=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13109957/setienne_180914_2954_0085.jpg",
         title: "GPU GRAPHICS CARDS",
        
 
     },
     {   
         id:2,
-        img:"https://mvcmagazine.com/wp-content/uploads/2020/08/mvccopsupreme.jpg",
+        img:"https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F07%2Fsupreme-rare-2020-online-sale-info-0.jpg?w=960&cbr=1&q=90&fit=max",
         title: "SUPREME OFF-WHITE HYPERBEAST",
         
     },
     {   
         id:3,
-        img:"https://i.imgur.com/GGWdrWj.jpg",
-        title: "YEEZY",
+        img:"https://i.pinimg.com/originals/64/38/b6/6438b650d7952d49b62aa5a35f1122f2.png",
+        title: "Shop Apparel",
+      
+    },
+];
+export const popularProducts = [
+    {   
+        id:1,
+        img:"https://images.stockx.com/images/KAWS-x-Uniqlo-Flayed-Tee-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1615425200",
+        title: "Kaws Tee White",
+       
+
+    },
+    {   
+        id:2,
+        img:"https://images.stockx.com/images/FEAR-OF-GOD-x-Nike-Warm-Up-T-Shirt-Sail.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1606147995",
+        title: "Fear of God x Nike Shirt",
+        
+    },
+    {   
+        id:3,
+        img:"https://cdn.shopify.com/s/files/1/0214/3706/products/001ZPH731905_BLK_A_1024x.png?v=1640357113",
+        title: "Bape Hoodie",
       
     },
 ];
