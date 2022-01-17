@@ -18,7 +18,7 @@ export const sliderItems = [
     {   
         id:3,
         img:"https://i.imgur.com/GGWdrWj.jpg",
-        title: "YEEZY MOONROCK A CLASSIC THAT STARTS IT ALL",
+        title: "SHOP YEEZY ",
         desc: "The shoes that save Kanye.",
         bg:"fbf0f4"
 
@@ -40,7 +40,7 @@ export const categories = [
     },
     {   
         id:3,
-        img:"https://i.pinimg.com/originals/64/38/b6/6438b650d7952d49b62aa5a35f1122f2.png",
+        img:"https://www.highsnobiety.com/static-assets/thumbor/XfIQ_O_7u-cmVNrPdOcrU7anck4=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2017/05/23165655/bape-101-10.jpg",
         title: "Shop Apparel",
       
     },
