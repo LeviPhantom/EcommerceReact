@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter } from '@material-ui/icons'
+import { Facebook, Instagram, MailOutline, Phone, Twitter } from '@material-ui/icons'
 import React from 'react'
 import styled from "styled-components"
 const Container = styled.div`
@@ -12,6 +12,7 @@ const Left = styled.div`
 `
 const Right = styled.div`
     flex: 1;
+    padding: 20px;
 `
 const Center = styled.div`
     flex: 1;
@@ -21,12 +22,20 @@ const Logo = styled.h1`
 
 `
 const Title = styled.h3`
+    margin-bottom: 30px;
 
 `
 const List = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 
 `
 const ListItem = styled.li`
+    width: 50%;
+    margin-bottom: 10px
 
 `
 const Desc = styled.p`
@@ -50,11 +59,25 @@ const SocialIcon = styled.div`
 
 
 `
+const ContactItem = styled.div`
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    marging-right: 10px;
+
+
+`
+const Payment = styled.img`
+    margin-top: 10px;
+    width: 50%;
+    height: 35%
+
+`
 const Footer = () => {
     return (
         <Container>
             <Left>
-                <Logo>LEVI.</Logo>
+                <Logo>LEVIVI.</Logo>
                 <Desc>
                     Sell everything store
                 </Desc>
@@ -73,17 +96,23 @@ const Footer = () => {
             <Center>
                 <Title>Useful Links</Title>
                 <List>
-                    <ListItem>HOME</ListItem>
-                    <ListItem>CART</ListItem>
-                    <ListItem>SHOES</ListItem>
-                    <ListItem>CLOTHES</ListItem>
-                    <ListItem>ELECTRONICS</ListItem>
-                    <ListItem>WISHLIST</ListItem>
-                    <ListItem>TERMS</ListItem>
+                    <ListItem>Home</ListItem>
+                    <ListItem>Cart</ListItem>
+                    <ListItem>Shoes</ListItem>
+                    <ListItem>Clothing</ListItem>
+                    <ListItem>Electronics</ListItem>
+                    <ListItem>PlayStation 5</ListItem>
+                    <ListItem>Wishlist</ListItem>
+                    <ListItem>Terms</ListItem>
 
                 </List>
             </Center>
-            <Right></Right>
+            <Right>
+                <Title>Contact</Title>
+                <ContactItem ><MailOutline style={{marginRight:"10px"}}/>  dinhphuc144@gmail.com</ContactItem>
+                <ContactItem><Phone style={{marginRight:"10px"}}/>  206 928 1419</ContactItem>
+                <Payment src="https://miro.medium.com/max/636/1*VRKsEolmw9OKZb7svyc9mw.png"/>
+            </Right>
         </Container>
     )
 }

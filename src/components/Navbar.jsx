@@ -61,7 +61,7 @@ const Navbar = () => {
                         <Search style={{color:"gray", fontSize:16}}/>
                     </SearchContainer>
                 </Left>
-                <Center><Logo>LEVI.</Logo></Center>
+                <Center><Logo>LEVIVI.</Logo></Center>
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
                     <MenuItem>SIGN IN</MenuItem>
