@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { mobile } from '../responsive';
 const Container = styled.div`
 `;
 const Title = styled.h1`
@@ -11,7 +12,8 @@ const Title = styled.h1`
   text-align: center
 `;
 const Wrapper = styled.div`
-  padding: 20px
+  padding: 20px;
+  ${mobile({padding: "10px"})}
 `;
 const Top = styled.div`
   display: flex;
@@ -35,11 +37,15 @@ const TopText = styled.span`
 
 `;
 const TopTexts = styled.div`
+  ${mobile({display: "none"})}
+
   
 `;
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({flexDirection: "column"})}
+
 `;
 const Info = styled.div`
   flex: 3
@@ -47,7 +53,9 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 10px
+  margin: 10px;
+  ${mobile({flexDirection: "column"})}
+
   
 `;
 const ProductDetail = styled.div`
@@ -58,6 +66,8 @@ const ProductDetail = styled.div`
 `;
 const Image = styled.img`
   width: 250px;
+  ${mobile({width: "20vh", height:"110px"})}
+
 `;
 const ProductName = styled.span`
   
@@ -98,12 +108,16 @@ const ProductAmountContainer = styled.span`
 `;
 const ProductAmount = styled.span`
   font-size: 18px;
-  margin: 5px
+  margin: 5px;
+  ${mobile({margin: "5px 15px"})}
+
   
 `;
 const ProductPrice = styled.span`
   font-size: 25px;
   font-weight: 300;
+  ${mobile({marginBottom: "15px"})}
+
   
 `;
 const Hr = styled.hr`
